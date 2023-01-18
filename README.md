@@ -71,6 +71,8 @@ from quotes automatically.
 
 ### `TheOneAPI`
 
+[Detailed documentation](https://doc.deno.land/https://raw.githubusercontent.com/velipso/seanc-SDK/main/src/api.ts)
+
 Example usage:
 
 ```typescript
@@ -92,9 +94,9 @@ const quotes = await api.getMovieQuotes('movieId', { offset: 0, limit: 10 });
 const name = await api.getCharacterName('characterId');
 ```
 
-[Detailed documentation](https://doc.deno.land/https://raw.githubusercontent.com/velipso/seanc-SDK/main/src/api.ts)
-
 ### `TheOneSDK`
+
+[Detailed documentation](https://doc.deno.land/https://raw.githubusercontent.com/velipso/seanc-SDK/main/src/sdk.ts)
 
 Example usage:
 
@@ -117,5 +119,3 @@ const movie = await sdk.getMovie('movieId');
 // Get all movie quotes (no paging required)
 const quotes = await sdk.getMovieQuotes('movieId');
 ```
-
-[Detailed documentation](https://doc.deno.land/https://raw.githubusercontent.com/velipso/seanc-SDK/main/src/sdk.ts)
