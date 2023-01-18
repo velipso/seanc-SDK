@@ -71,4 +71,51 @@ from quotes automatically.
 
 ### `TheOneAPI`
 
-blah
+Example usage:
+
+```typescript
+import { TheOneAPI } from 'https://raw.githubusercontent.com/velipso/seanc-SDK/main/src/api.ts';
+
+// Provide your access token to the API
+const api = new TheOneAPI(accessToken);
+
+// List movies, starting at offset 0, with a limit of 10
+const movies = await api.listMovies({ offset: 0, limit: 10 });
+
+// Get a single movie
+const movie = await api.getMovie('movieId');
+
+// Get quotes from a movie
+const quotes = await api.getMovieQuotes('movieId', { offset: 0, limit: 10 });
+
+// Resolve a character ID to a name
+const name = await api.getCharacterName('characterId');
+```
+
+[Detailed documentation](https://doc.deno.land/https://raw.githubusercontent.com/velipso/seanc-SDK/main/src/api.ts)
+
+### `TheOneSDK`
+
+Example usage:
+
+```typescript
+import { TheOneAPI } from 'https://raw.githubusercontent.com/velipso/seanc-SDK/main/src/api.ts';
+import { TheOneSDK } from 'https://raw.githubusercontent.com/velipso/seanc-SDK/main/src/sdk.ts';
+
+// First, you need to create your API using your access token
+const api = new TheOneAPI(accessToken);
+
+// Now you can create the SDK
+const sdk = new TheOneSDK(api);
+
+// Fetch all movies (no paging required)
+const movies = await sdk.allMovies();
+
+// Get a single movie
+const movie = await sdk.getMovie('movieId');
+
+// Get all movie quotes (no paging required)
+const quotes = await sdk.getMovieQuotes('movieId');
+```
+
+[Detailed documentation](https://doc.deno.land/https://raw.githubusercontent.com/velipso/seanc-SDK/main/src/sdk.ts)
