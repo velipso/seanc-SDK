@@ -43,10 +43,10 @@ command line, but ran out of time.
 
 Instead, the CLI tool just lists all movies.
 
-#### 3. No examples
+#### 3. Barebones examples
 
-I wanted to include some runnable examples in the repo, but you'll have to settle for plain old
-docmentation.
+I only include a single [example](./examples) for `TheOneAPI` and `TheOneSDK`.  They're not great, but they're
+something.
 
 #### 4. Naive rate limiting and cache
 
